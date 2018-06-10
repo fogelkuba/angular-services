@@ -16,6 +16,5 @@ export class NewAccountComponent {
     });
     const service = new LoggingService();
     service.logStatusChange(accountStatus);
-    // console.log('A server status changed, new status: ' + accountStatus);
   }
 }
