@@ -10,9 +10,7 @@ import {LoggingService} from "../logging.service";
 export class NewAccountComponent {
   @Output() accountAdded = new EventEmitter<{name: string, status: string}>();
 
-  constructor(private loggingService: LoggingService ){
-
-  }
+  constructor(private loggingService: LoggingService ){}
 
   onCreateAccount(accountName: string, accountStatus: string) {
     this.accountAdded.emit({
@@ -20,6 +18,7 @@ export class NewAccountComponent {
       status: accountStatus
     });
 
+    this.loggingService.logStatusChange(accountStatus);
 
     // tak nie robic. zamiast nowych isntancji stosowac dependecny injection
     // const service = new LoggingService();
