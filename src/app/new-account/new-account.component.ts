@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { LoggingService } from "../logging.service";
+// import { LoggingService } from "../logging.service"; //tak nie robić
 
 @Component({
   selector: 'app-new-account',
@@ -14,7 +14,13 @@ export class NewAccountComponent {
       name: accountName,
       status: accountStatus
     });
-    const service = new LoggingService();
-    service.logStatusChange(accountStatus);
+
+    
+    // tak nie robic. zamiast nowych isntancji stosowac dependecny injection
+    // const service = new LoggingService();
+    // service.logStatusChange(accountStatus);
+
+
+
   }
 }
