@@ -21,7 +21,7 @@ export class AccountsService {
       status: status
     })
   }
-  updateStatus(id: number, stastus: string){
-
+  updateStatus(id: number, status: string){
+    this.accounts[id].status = status;
   }
 }
