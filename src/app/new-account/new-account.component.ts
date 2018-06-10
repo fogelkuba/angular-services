@@ -20,7 +20,7 @@ export class NewAccountComponent {
 
     this.loggingService.logStatusChange(accountStatus);
 
-    // tak nie robic. zamiast nowych isntancji stosowac dependecny injection
+    // tak nie robic. zamiast nowych isntancji ->  stosowac dependency injection
     // const service = new LoggingService();
     // service.logStatusChange(accountStatus);
 
