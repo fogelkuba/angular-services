@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import {LoggingService} from "../logging.service";
 import {AccountsService} from "../accounts.service";
 
@@ -14,7 +14,6 @@ export class NewAccountComponent {
 
   onCreateAccount(accountName: string, accountStatus: string) {
     this.accountsService.addAccount(accountName, accountStatus);
-
     this.loggingService.logStatusChange(accountStatus);
 
     // tak nie robic. zamiast nowych isntancji ->  stosowac dependency injection
