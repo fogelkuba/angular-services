@@ -14,7 +14,7 @@ export class NewAccountComponent {
               private accountsService: AccountsService){
     this.accountsService.statusUpdated.subscribe(
       (status: string) => {
-        alest
+        alert('New status: ' + status)
       }
     )
   }
