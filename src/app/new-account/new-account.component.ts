@@ -15,7 +15,7 @@ export class NewAccountComponent {
 
   onCreateAccount(accountName: string, accountStatus: string) {
     this.accountsService.addAccount(accountName, accountStatus);
-    this.loggingService.logStatusChange(accountStatus);
+    // this.loggingService.logStatusChange(accountStatus);
 
     // tak nie robic. zamiast nowych isntancji ->  stosowac dependency injection
     // const service = new LoggingService();
